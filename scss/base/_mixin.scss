@@ -1,0 +1,32 @@
+
+
+@mixin display-flex ($displayFlex, $flexDirection, $justifyContFlex, $AlignItems) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContFlex;
+    align-items: $AlignItems;
+}
+
+@mixin sizes($widht, $height, $margin, $padding, $borderRadius) {
+    width: $widht;
+    height: $height;
+    margin: $margin;
+    padding: $padding;
+    border-radius: $borderRadius;
+}
+@mixin heiwid ($height, $widht) {
+
+    width: $widht;
+    height: $height;
+}
+
+@mixin textConfig ($familiy, $size, $align, $color, $weight){
+    font-family: $familiy;
+    font-size: $size;
+    text-align: $align;
+    color: $color;
+    font-weight: $weight;
+    
+}
+
+  
