@@ -25,7 +25,7 @@ body {
 }
 
 .logo {
-    @include sizes (60px, 60px, 50px, 0, 100%);
+    @include sizes (20%, 20%, 50px, 0, 100%);
 }
 
 nav {
@@ -35,19 +35,14 @@ nav {
 }
 
 .navList{
-    @include display-flex (flex, row, space-around, center);
+    @include display-flex (flex, row, flex-end, center);
     height: 13vh;
     text-decoration: none;
 
 }
 .item {
     list-style-type: none;
-    padding-top: 4.5vh;
-    @include heiwid (15vh, 100%);
-    font-family: $font;
-    font-weight: bold;
-    font-size: x-large;
-    text-align:center;
+    padding: 3%;
     transition-property: background-color, transform;
     transition-duration: 1s;
 }
@@ -97,10 +92,10 @@ a {
 }
 
 .carruselImg {
-    @include sizes (100vw, 100vh, 0, 0, 0);
-    max-width:100%;
-  max-height: 90vh;
+    @include sizes (100vw, 90vh, 0, 0, 0);
+    
 }
+  
 .botonComprarAhora {
     background-color: $color-principal;
     @include sizes (fit-content, fit-content, 0, 20px, 25px);
@@ -194,7 +189,7 @@ a {
     "section4 section4 section4"
     "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 12vh 90vh 50vh 60vh 9vh;
+    grid-template-rows: 12vh 90vh 90vh 60vh 9vh;
   }
 
   // estilos de Nosotros
@@ -205,8 +200,11 @@ a {
       @include display-flex (flex, row, space-around, center);
        
   }
+  .carrusel {
+      margin: 20vw;
+  }
   .carruselImg2{
-      @include sizes (50vh, 50vh, 0, 0, 10%);
+      @include sizes (100%, 100%, 0, 0, 10%);
         
   }
   .section1Nosotros {
@@ -215,14 +213,16 @@ a {
       @include display-flex(flex, column, center, center);
       
       h2{
-          margin: 1vh;
+          margin: 2vh;
           margin-right: 5vw;
-          @include textConfig($font, large, center, $color-principal, bold)
+          margin-left: 5vw;
+          @include textConfig($font, x-large, center, $color-principal, bold)
 
       }
       p{
-        margin: 5vh;
-        margin-right: 5vw;
+        margin: 2vh;
+        margin-right: 6vw;
+        margin-left: 5vw;
         @include textConfig($font, medium, center, $color-principal, bold)
       }
   }
@@ -370,7 +370,7 @@ a {
   
     "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 77vh 8vh;
+    grid-template-rows: 13vh 90vh 8vh;
     
   }
   
@@ -384,7 +384,7 @@ a {
       background-color: $color-secundario;
     grid-area:main;
     @include display-flex(flex, row, space-around, center);
-    overflow: scroll;
+    overflow: auto;
   }
 
   .receta {
@@ -485,16 +485,21 @@ a {
         "section section"
         "footer footer";
         grid-template-columns: 50% 50% ;
-        grid-template-rows: 13vh 33vh 55vh 9vh;
-    
+        grid-template-rows: 13vh 55vh 70vh 9vh;
+       
     p {
         @include textConfig ($font, small, center, $color-principal, bold );
+        
     }
+    }
+    .carrusel {
+        margin: 10%;
     }
 
     .carruselImg2 {
-        @include sizes (100vw, 33vh, 0, 3%, 10%)
+        @include sizes (100%, 100%, 0, 0%, 10%)
     }
+
 
 
     //mobile Tienda

@@ -1,9 +1,9 @@
 %imgIndex{
 
-    width: 22vh;
-  height: 22vh;
+  width: 30vh;
+  height: 30vh;
   border-radius: 100%;
-  margin: 1vh;
+  
 }
 
 %titIndex{
@@ -14,6 +14,7 @@
   color: #DEA057;
   font-weight: bold;
   font-size:x-large;
+  
 }
 
 
@@ -22,4 +23,5 @@
     font-family: 'Raleway', sans-serif;
   text-align: center;
   margin: 2vh;
+  overflow: auto;
 }
