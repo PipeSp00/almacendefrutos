@@ -1,6 +1,7 @@
 @import "base/mixin";
 @import "base/variables";
 @import "base/extends";
+@import "base/maps";
 
 * {
     padding: 0;
@@ -42,7 +43,7 @@ nav {
 }
 .item {
     list-style-type: none;
-    padding: 3%;
+    padding: map-get($estiloPad, padding3);
     transition-property: background-color, transform;
     transition-duration: 1s;
 }
@@ -358,7 +359,7 @@ a {
   }
 
   legend {
-      margin:1%;
+      margin:map-get($estiloMarg, marg1);
       background-color: $color-principal;
       @include textConfig ($font, x-large, center, white, bold)
   }
@@ -493,7 +494,7 @@ a {
     }
     }
     .carrusel {
-        margin: 10%;
+        margin: map-get($estiloMarg, marg10);
     }
 
     .carruselImg2 {
