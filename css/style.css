@@ -1,7 +1,8 @@
 .section1 img, .section2 img, .section3 img {
-  width: 30vh;
-  height: 30vh;
-  border-radius: 100%; }
+  width: 25vh;
+  height: 25vh;
+  border-radius: 100%;
+  margin: 5%; }
 
 .section1 h3, .section2 h3, .section3 h3 {
   font-family: 'Raleway', sans-serif;
@@ -39,8 +40,8 @@ body {
   align-items: center; }
 
 .logo {
-  width: 20%;
-  height: 20%;
+  width: 12vh;
+  height: 12vh;
   margin: 50px;
   padding: 0;
   border-radius: 100%; }
@@ -74,7 +75,7 @@ a {
   transition-duration: 1s;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
-  font-size: large;
+  font-size: 3vh;
   text-align: center;
   color: white;
   font-weight: bold; }
@@ -107,12 +108,16 @@ a {
   justify-content: center;
   align-items: center; }
 
+.carrvusel {
+  width: 100vw; }
+
 .carruselImg {
   width: 100vw;
   height: 90vh;
   margin: 0;
   padding: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  max-height: 90vh; }
 
 .botonComprarAhora {
   background-color: #DEA057;
@@ -188,7 +193,7 @@ a {
   height: 100vh;
   grid-template-areas: "header navegador navegador" "main main main" "section1 section2 section3"  "section4 section4 section4" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 12vh 90vh 90vh 60vh 9vh; }
+  grid-template-rows: 13vh 90vh 90vh 60vh 9vh; }
 
 .mainNosotros {
   background-color: #fae7a9;
@@ -202,8 +207,8 @@ a {
   margin: 20vw; }
 
 .carruselImg2 {
-  width: 100%;
-  height: 100%;
+  width: 70vh;
+  height: 70vh;
   margin: 0;
   padding: 0;
   border-radius: 10%; }
@@ -375,7 +380,8 @@ legend {
   font-size: x-large;
   text-align: center;
   color: white;
-  font-weight: bold; }
+  font-weight: bold;
+  width: 100%; }
 
 .contenedorContacto {
   display: grid;
@@ -390,11 +396,11 @@ legend {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  overflow: auto; }
+  align-items: center; }
 
 .receta {
-  width: 20vw; }
+  width: 20vw;
+  height: 20vh; }
 
 .contenedorRecetas {
   display: grid;
@@ -416,6 +422,12 @@ legend {
     grid-template-areas: "header navegador" "main main" "section1 section1" "section2 section2" "section3 section3" "section4 section4" "footer footer";
     grid-template-columns: 50% 50%;
     grid-template-rows: 15vh 30vh 60vh 60vh 60vh 50vh 9vh; }
+  .logo {
+    width: 13vh;
+    height: 13vh;
+    margin: 10px;
+    padding: 0;
+    border-radius: 100%; }
   .navList {
     display: none; }
   header {
@@ -448,9 +460,10 @@ legend {
       font-weight: bold;
       transform: scale(1.1); }
   .hamburgesaBoton {
+    border: none;
     background-color: #fae7a9;
     color: #DEA057;
-    transform: scale(1.3); }
+    transform: scale(1.4); }
   .carruselImg {
     width: 100vw;
     height: 30vh;
@@ -464,7 +477,7 @@ legend {
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "section section" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 13vh 55vh 70vh 9vh; }
+    grid-template-rows: 15vh 70vh 70vh 8vh; }
     .contenedorNosotros p {
       font-family: "Raleway", sans-serif;
       font-size: small;
@@ -473,11 +486,13 @@ legend {
       font-weight: bold; }
   .carrusel {
     margin: 9%; }
+  .mainNosotros {
+    background-color: red; }
   .carruselImg2 {
-    width: 100%;
-    height: 100%;
+    width: 75vw;
+    height: 75vw;
     margin: 0;
-    padding: 0%;
+    padding: 0;
     border-radius: 10%; }
   .contenedorTienda {
     display: grid;
@@ -575,5 +590,11 @@ legend {
     grid-template-areas: "header navegador" "main main" "footer footer ";
     grid-template-columns: 50% 50%;
     grid-template-rows: 15vh 77vh  8vh; }
+    .contenedorRecetas .mainRecetas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     .contenedorRecetas .receta {
-      width: 100%; } }
+      width: 80vw;
+      height: 50vh; } }

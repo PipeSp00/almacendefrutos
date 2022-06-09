@@ -26,7 +26,7 @@ body {
 }
 
 .logo {
-    @include sizes (20%, 20%, 50px, 0, 100%);
+    @include sizes (12vh, 12vh, 50px, 0, 100%);
 }
 
 nav {
@@ -61,7 +61,7 @@ a {
     transition-property: color, transform;
     transition-duration: 1s;
     text-decoration: none;
-    @include textConfig ($font, large, center, white, bold)
+    @include textConfig ($font, 3vh, center, white, bold)
 }
 
 
@@ -91,9 +91,13 @@ a {
     grid-area: main;
     @include display-flex (flex, row, center, center);
 }
+.carrvusel {
+    width: 100vw;
+}
 
 .carruselImg {
     @include sizes (100vw, 90vh, 0, 0, 0);
+    max-height: 90vh;
     
 }
   
@@ -190,7 +194,7 @@ a {
     "section4 section4 section4"
     "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 12vh 90vh 90vh 60vh 9vh;
+    grid-template-rows: 13vh 90vh 90vh 60vh 9vh;
   }
 
   // estilos de Nosotros
@@ -205,7 +209,7 @@ a {
       margin: 20vw;
   }
   .carruselImg2{
-      @include sizes (100%, 100%, 0, 0, 10%);
+      @include sizes (70vh, 70vh, 0, 0, 10%);
         
   }
   .section1Nosotros {
@@ -361,7 +365,8 @@ a {
   legend {
       margin:map-get($estiloMarg, marg1);
       background-color: $color-principal;
-      @include textConfig ($font, x-large, center, white, bold)
+      @include textConfig ($font, x-large, center, white, bold);
+      width: 100%;
   }
 .contenedorContacto{
     display: grid;
@@ -385,11 +390,12 @@ a {
       background-color: $color-secundario;
     grid-area:main;
     @include display-flex(flex, row, space-around, center);
-    overflow: auto;
+    
   }
 
   .receta {
       width: 20vw;
+      height: 20vh;
   }
   
   .contenedorRecetas{
@@ -433,6 +439,9 @@ a {
         
         
     }
+    .logo {
+        @include sizes (13vh, 13vh, 10px, 0, 100%);
+    }
 
     .navList {
         display: none;
@@ -459,9 +468,10 @@ a {
 
     }
     .hamburgesaBoton{
+        border: none;
         background-color: $color-secundario;
         color: $color-principal ;
-        transform: scale(1.3);
+        transform: scale(1.4);
 
     }
     
@@ -476,7 +486,9 @@ a {
     }
 
 
-    //Mobile Nosotros
+    //Mobile N osotros
+
+    
 
     .contenedorNosotros{
         display: grid;
@@ -486,7 +498,7 @@ a {
         "section section"
         "footer footer";
         grid-template-columns: 50% 50% ;
-        grid-template-rows: 13vh 55vh 70vh 9vh;
+        grid-template-rows: 15vh 70vh 70vh 8vh;
        
     p {
         @include textConfig ($font, small, center, $color-principal, bold );
@@ -496,12 +508,15 @@ a {
     .carrusel {
         margin: map-get($estiloMarg, marg10);
     }
-
-    .carruselImg2 {
-        @include sizes (100%, 100%, 0, 0%, 10%)
+    .mainNosotros {
+        background-color: red
     }
 
-
+    .carruselImg2 {
+        @include sizes (75vw, 75vw, 0, 0, 10%);
+        
+    }
+    
 
     //mobile Tienda
 
@@ -599,11 +614,14 @@ a {
     grid-template-columns: 50% 50%;
     grid-template-rows: 15vh 77vh  8vh; 
   
-
+    .mainRecetas {
+        @include display-flex(flex, column, center, center);
+    }
     
 
     .receta {
-        width: 100%;
+        width: 80vw;
+        height: 50vh;
         
          
     }
