@@ -25,11 +25,19 @@
   text-decoration: none;
   list-style-type: none; }
 
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #DEA057;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none; }
+
 .hamburguesa {
   display: none; }
 
 body {
-  background-color: #fae7d8; }
+  background-color: #fae7a9; }
 
 .header {
   background-color: #DEA057;
@@ -40,9 +48,9 @@ body {
   align-items: center; }
 
 .logo {
-  width: 12vh;
-  height: 12vh;
-  margin: 50px;
+  width: 10vh;
+  height: 10vh;
+  margin: 20px;
   padding: 0;
   border-radius: 100%; }
 
@@ -75,7 +83,7 @@ a {
   transition-duration: 1s;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
-  font-size: 3vh;
+  font-size: 120%;
   text-align: center;
   color: white;
   font-weight: bold; }
@@ -94,11 +102,13 @@ a {
     margin: 1vh; }
 
 .red {
-  width: 4vh;
-  height: 4vh;
+  width: 5vw;
+  height: 5vw;
   margin: 1vh;
   padding: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  max-height: 40px;
+  max-width: 40px; }
 
 .mainIndex {
   background-color: #fae7a9;
@@ -184,7 +194,7 @@ a {
 .map {
   width: 80%;
   height: 80%;
-  margin: 2vh;
+  margin: 5vh;
   padding: 0;
   border-radius: 5vh; }
 
@@ -249,29 +259,35 @@ a {
 .mainTienda {
   grid-area: main;
   background-color: #fae7a9; }
+  .mainTienda h1 {
+    margin: 2%; }
+
+.buscar {
+  height: 10px; }
 
 .section1Tienda {
   display: flex;
   flex-direction: row;
-  justify-content: auto;
+  justify-content: space-around;
   align-items: auto;
   grid-area: section1;
-  background-color: #fae7a9; }
+  background-color: #fae7a9;
+  overflow: auto; }
   .section1Tienda div {
     display: flex;
     flex-direction: column;
     justify-content: auto;
-    align-items: auto;
-    margin-right: 10vh;
-    margin-left: 10vh; }
+    align-items: auto; }
   .section1Tienda img {
     position: relative;
     top: 3vh;
-    width: 30vh;
-    height: 30vh;
+    width: 25vw;
+    height: 25vw;
     margin: 0;
     padding: 0;
     border-radius: 100%;
+    max-width: 25vh;
+    max-height: 25vh;
     transition-duration: 1s;
     transition-property: size, transform; }
   .section1Tienda img:hover {
@@ -279,7 +295,7 @@ a {
     transform: scale(1.2); }
   .section1Tienda h3 {
     font-family: "Raleway", sans-serif;
-    font-size: medium;
+    font-size: large;
     text-align: center;
     color: #DEA057;
     font-weight: bold; }
@@ -287,25 +303,26 @@ a {
 .section2Tienda {
   display: flex;
   flex-direction: row;
-  justify-content: auto;
+  justify-content: space-around;
   align-items: auto;
   grid-area: section2;
-  background-color: #fae7a9; }
+  background-color: #fae7a9;
+  overflow: scroll; }
   .section2Tienda div {
     display: flex;
     flex-direction: column;
     justify-content: auto;
-    align-items: auto;
-    margin-right: 10vh;
-    margin-left: 10vh; }
+    align-items: auto; }
   .section2Tienda img {
     position: relative;
     top: 3vh;
-    width: 30vh;
-    height: 30vh;
+    width: 25vw;
+    height: 25vw;
     margin: 0;
     padding: 0;
     border-radius: 100%;
+    max-width: 25vh;
+    max-height: 25vh;
     transition-duration: 1s;
     transition-property: size, transform; }
   .section2Tienda img:hover {
@@ -313,7 +330,7 @@ a {
     transform: scale(1.2); }
   .section2Tienda h3 {
     font-family: "Raleway", sans-serif;
-    font-size: medium;
+    font-size: large;
     text-align: center;
     color: #DEA057;
     font-weight: bold; }
@@ -321,25 +338,26 @@ a {
 .section3Tienda {
   display: flex;
   flex-direction: row;
-  justify-content: auto;
+  justify-content: space-around;
   align-items: auto;
   grid-area: section3;
-  background-color: #fae7a9; }
+  background-color: #fae7a9;
+  overflow: auto; }
   .section3Tienda div {
     display: flex;
     flex-direction: column;
     justify-content: auto;
-    align-items: auto;
-    margin-right: 10vh;
-    margin-left: 10vh; }
+    align-items: auto; }
   .section3Tienda img {
     position: relative;
     top: 3vh;
-    width: 30vh;
-    height: 30vh;
+    width: 25vw;
+    height: 25vw;
     margin: 0;
     padding: 0;
     border-radius: 100%;
+    max-width: 25vh;
+    max-height: 25vh;
     transition-duration: 1s;
     transition-property: size, transform; }
   .section3Tienda img:hover {
@@ -347,7 +365,7 @@ a {
     transform: scale(1.2); }
   .section3Tienda h3 {
     font-family: "Raleway", sans-serif;
-    font-size: medium;
+    font-size: large;
     text-align: center;
     color: #DEA057;
     font-weight: bold; }
@@ -367,7 +385,7 @@ a {
   height: 100vh;
   grid-template-areas: "header navegador navegador" "main main main" "section1 section1 section1" "section2 section2 section2" "section3 section3 section3" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 13vh 15vh 50vh 50vh 50vh 8vh; }
+  grid-template-rows: 13vh 15vh 40vh 40vh 50vh 8vh; }
 
 .mainContacto {
   grid-area: main;
@@ -397,15 +415,41 @@ legend {
   flex-direction: row;
   justify-content: space-around;
   align-items: center; }
+  .mainRecetas h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 100%;
+    text-align: center;
+    color: #DEA057;
+    font-weight: bold; }
+  .mainRecetas hp {
+    font-family: "Raleway", sans-serif;
+    font-size: 70%;
+    text-align: center;
+    color: #DEA057;
+    font-weight: bold; }
 
 .receta {
-  width: 20vw;
-  height: 20vh; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  height: 120%;
+  max-height: 60vh;
+  padding: 1%;
+  border-radius: 5%;
+  background-color: #f5dabc;
+  overflow: auto; }
+
+.imgRecetas {
+  width: 60%;
+  border-radius: 5%;
+  margin: 1%; }
 
 .contenedorRecetas {
   display: grid;
   height: 100vh;
-  grid-template-areas: "header navegador navegador" "main main main"  "footer footer footer";
+  grid-template-areas: "header navegador navegador" "main main main" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 13vh 79vh 8vh; }
 
@@ -421,10 +465,10 @@ legend {
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "section1 section1" "section2 section2" "section3 section3" "section4 section4" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15vh 30vh 60vh 60vh 60vh 50vh 9vh; }
+    grid-template-rows: 13vh 30vh 60vh 60vh 60vh 50vh 9vh; }
   .logo {
-    width: 13vh;
-    height: 13vh;
+    width: 10vh;
+    height: 10vh;
     margin: 10px;
     padding: 0;
     border-radius: 100%; }
@@ -434,8 +478,7 @@ legend {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    background-color: red; }
+    align-items: center; }
   nav {
     display: flex;
     flex-direction: row;
@@ -486,8 +529,6 @@ legend {
       font-weight: bold; }
   .carrusel {
     margin: 9%; }
-  .mainNosotros {
-    background-color: red; }
   .carruselImg2 {
     width: 75vw;
     height: 75vw;
@@ -499,7 +540,7 @@ legend {
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "section1 section1" "section2 section2" "section3 section3" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15vh 15vh 30vh 30vh 30vh 8vh; }
+    grid-template-rows: 13vh 15vh 30vh 30vh 30vh 8vh; }
   .section1Tienda {
     display: flex;
     flex-direction: row;
@@ -589,7 +630,7 @@ legend {
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "footer footer ";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15vh 77vh  8vh; }
+    grid-template-rows: 13vh 77vh  8vh; }
     .contenedorRecetas .mainRecetas {
       display: flex;
       flex-direction: column;

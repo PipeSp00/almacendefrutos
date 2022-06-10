@@ -11,11 +11,20 @@
     list-style-type: none; 
 }
 
+h1{
+    font-family: $font;
+    color: $color-principal;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .hamburguesa {
     display: none;
 }
 body {
-    background-color: $color-terciario;
+    background-color: $color-secundario;
 }
 
 .header {
@@ -26,7 +35,8 @@ body {
 }
 
 .logo {
-    @include sizes (12vh, 12vh, 50px, 0, 100%);
+    @include sizes (10vh, 10vh, 20px, 0, 100%);
+    
 }
 
 nav {
@@ -61,7 +71,8 @@ a {
     transition-property: color, transform;
     transition-duration: 1s;
     text-decoration: none;
-    @include textConfig ($font, 3vh, center, white, bold)
+    @include textConfig ($font, 120%, center, white, bold);
+    
 }
 
 
@@ -80,7 +91,9 @@ a {
     }
 }
 .red {
-    @include sizes (4vh, 4vh, 1vh, 0, 0)
+    @include sizes (5vw, 5vw, 1vh, 0, 0);
+    max-height: 40px;
+    max-width: 40px;
 }
 
 
@@ -182,7 +195,7 @@ a {
 }
 
 .map {
-    @include sizes ( 80%, 80%, 2vh, 0, 5vh);
+    @include sizes ( 80%, 80%, 5vh, 0, 5vh);
 }
 
 .contenedorIndex{
@@ -247,77 +260,91 @@ a {
 .mainTienda {
       grid-area: main;
       background-color: $color-secundario;
+      
+      h1 {
+          margin: 2%;
+      }
+  }
+
+  .buscar {
+      height: 10px;
   }
 
 .section1Tienda {
 
-    @include display-flex(flex, row, auto, auto);
+    @include display-flex(flex, row, space-around, auto);
     grid-area: section1;
     background-color: $color-secundario;
+    overflow: auto;
 
     div{
         @include display-flex(flex, column, auto, auto);
-        margin-right: 10vh;
-        margin-left: 10vh;
+        
     }
     img {
         position: relative;
         top: 3vh;
-        @include sizes (30vh, 30vh, 0, 0, 100%);
+        @include sizes (25vw, 25vw, 0, 0, 100%);
+        max-width: 25vh;
+        max-height: 25vh;  
         transition-duration: 1s;
-        transition-property: size, transform;    
+        transition-property: size, transform;   
         }
         img:hover{
             transition: 1s ;
             transform: scale(1.2);
       }
     h3{
-        @include textConfig ($font, medium, center, $color-principal, bold)
+        @include textConfig ($font, large, center, $color-principal, bold)
     } 
 
 }
 .section2Tienda {
 
-    @include display-flex(flex, row, auto, auto);
+    @include display-flex(flex, row, space-around, auto);
     grid-area: section2;
     background-color: $color-secundario;
+    overflow: scroll;
 
     div{
         @include display-flex(flex, column, auto, auto);
-        margin-right: 10vh;
-        margin-left: 10vh;
+        
+        
     }
     img {
         position: relative;
         top: 3vh;
-        @include sizes (30vh, 30vh, 0, 0, 100%);
+        @include sizes (25vw, 25vw, 0, 0, 100%);
+        max-width: 25vh;
+        max-height: 25vh;
         transition-duration: 1s;
-        transition-property: size, transform;    
+        transition-property: size, transform;   
         }
         img:hover{
             transition: 1s ;
             transform: scale(1.2);
       }
     h3{
-        @include textConfig ($font, medium, center, $color-principal, bold)
+        @include textConfig ($font, large, center, $color-principal, bold)
     } 
 
 }
 .section3Tienda {
 
-    @include display-flex(flex, row, auto, auto);
+    @include display-flex(flex, row, space-around, auto);
     grid-area: section3;
     background-color: $color-secundario;
+    overflow: auto;
 
     div{
         @include display-flex(flex, column, auto, auto);
-        margin-right: 10vh;
-        margin-left: 10vh;
     }
     img {
         position: relative;
         top: 3vh;
-        @include sizes (30vh, 30vh, 0, 0, 100%);
+        @include sizes (25vw, 25vw, 0, 0, 100%);
+        max-width: 25vh;
+        max-height: 25vh;
         transition-duration: 1s;
         transition-property: size, transform;    
         }
@@ -326,7 +353,7 @@ a {
             transform: scale(1.2);
       }
     h3{
-        @include textConfig ($font, medium, center, $color-principal, bold)
+        @include textConfig ($font, large, center, $color-principal, bold)
     } 
 
 }
@@ -351,7 +378,7 @@ a {
     "section3 section3 section3"
     "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 15vh 50vh 50vh 50vh 8vh;
+    grid-template-rows: 13vh 15vh 40vh 40vh 50vh 8vh;
   }
 
 // estilos de contacto
@@ -380,6 +407,7 @@ a {
     
   }
   
+  
 
   // Estilos de Recetas 
 
@@ -390,20 +418,36 @@ a {
       background-color: $color-secundario;
     grid-area:main;
     @include display-flex(flex, row, space-around, center);
-    
+  
+    h2{
+        @include textConfig ($font, 100%, center, $color-principal, bold)
+    } 
+    hp{
+        @include textConfig ($font, 70%, center, $color-principal, bold)
+    } 
   }
 
   .receta {
-      width: 20vw;
-      height: 20vh;
+    @include display-flex(flex, column, space-around, center);
+      width: 25%;
+      height: 120%;
+      max-height: 60vh;
+      padding: 1%;
+      border-radius: 5%;
+      background-color: #f5dabc;
+      overflow: auto;
   }
   
+  .imgRecetas {
+      width: 60%;
+      border-radius: 5%;
+      margin: 1%;
+  }
   .contenedorRecetas{
     display: grid;
     height: 100vh;
     grid-template-areas: "header navegador navegador"
     "main main main"
-  
     "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 13vh 79vh 8vh;
@@ -435,12 +479,12 @@ a {
         "section4 section4"
         "footer footer";
         grid-template-columns: 50% 50%;
-        grid-template-rows:15vh 30vh 60vh 60vh 60vh 50vh 9vh;
+        grid-template-rows:13vh 30vh 60vh 60vh 60vh 50vh 9vh;
         
         
     }
     .logo {
-        @include sizes (13vh, 13vh, 10px, 0, 100%);
+        @include sizes (10vh, 10vh, 10px, 0, 100%);
     }
 
     .navList {
@@ -448,7 +492,7 @@ a {
     }
     header {
         @include display-flex(flex, row, flex-end, center);
-        background-color: red;
+        
     }
     nav{ 
         @include display-flex(flex, row, flex-end, center);
@@ -508,9 +552,7 @@ a {
     .carrusel {
         margin: map-get($estiloMarg, marg10);
     }
-    .mainNosotros {
-        background-color: red
-    }
+   
 
     .carruselImg2 {
         @include sizes (75vw, 75vw, 0, 0, 10%);
@@ -530,7 +572,7 @@ a {
         "section3 section3"
         "footer footer";
         grid-template-columns: 50% 50%;
-        grid-template-rows: 15vh 15vh 30vh 30vh 30vh 8vh;
+        grid-template-rows: 13vh 15vh 30vh 30vh 30vh 8vh;
       }
 
       .section1Tienda {
@@ -612,7 +654,7 @@ a {
     "main main"
     "footer footer ";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15vh 77vh  8vh; 
+    grid-template-rows: 13vh 77vh  8vh; 
   
     .mainRecetas {
         @include display-flex(flex, column, center, center);
