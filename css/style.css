@@ -27,7 +27,7 @@
 
 h1 {
   font-family: "Raleway", sans-serif;
-  color: #DEA057;
+  color: #e29235;
   font-size: x-large;
   text-align: center;
   font-weight: bold;
@@ -40,7 +40,7 @@ body {
   background-color: #fae7a9; }
 
 .header {
-  background-color: #DEA057;
+  background-color: #e29235;
   grid-area: header;
   display: flex;
   flex-direction: row;
@@ -56,7 +56,7 @@ body {
 
 nav {
   grid-area: navegador;
-  background-color: #DEA057; }
+  background-color: #e29235; }
 
 .navList {
   display: flex;
@@ -130,7 +130,7 @@ a {
   max-height: 90vh; }
 
 .botonComprarAhora {
-  background-color: #DEA057;
+  background-color: #e29235;
   width: fit-content;
   height: fit-content;
   margin: 0;
@@ -187,11 +187,11 @@ a {
     font-family: "Raleway", sans-serif;
     font-size: x-large;
     text-align: center;
-    color: #DEA057;
+    color: #e29235;
     font-weight: bold;
     margin-top: 2vh; }
 
-.map {
+botonComprar .map {
   width: 80%;
   height: 80%;
   margin: 5vh;
@@ -201,7 +201,7 @@ a {
 .contenedorIndex {
   display: grid;
   height: 100vh;
-  grid-template-areas: "header navegador navegador" "main main main" "section1 section2 section3"  "section4 section4 section4" "footer footer footer";
+  grid-template-areas: "header navegador navegador" "main main main" "section1 section2 section3" "section4 section4 section4" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 13vh 90vh 90vh 60vh 9vh; }
 
@@ -213,12 +213,9 @@ a {
   justify-content: space-around;
   align-items: center; }
 
-.carrusel {
-  margin: 20vw; }
-
 .carruselImg2 {
-  width: 70vh;
-  height: 70vh;
+  width: 60vh;
+  height: 60vh;
   margin: 0;
   padding: 0;
   border-radius: 10%; }
@@ -233,20 +230,19 @@ a {
   .section1Nosotros h2 {
     margin: 2vh;
     margin-right: 5vw;
-    margin-left: 5vw;
     font-family: "Raleway", sans-serif;
-    font-size: x-large;
+    font-size: 3vh;
     text-align: center;
-    color: #DEA057;
+    color: #e29235;
     font-weight: bold; }
   .section1Nosotros p {
     margin: 2vh;
-    margin-right: 6vw;
-    margin-left: 5vw;
+    margin-right: 4vw;
+    overflow: auto;
     font-family: "Raleway", sans-serif;
-    font-size: medium;
+    font-size: 1.5vw;
     text-align: center;
-    color: #DEA057;
+    color: #e29235;
     font-weight: bold; }
 
 .contenedorNosotros {
@@ -259,133 +255,121 @@ a {
 .mainTienda {
   grid-area: main;
   background-color: #fae7a9; }
-  .mainTienda h1 {
-    margin: 2%; }
+  .mainTienda h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 200%;
+    text-align: center;
+    color: #e29235;
+    font-weight: bold;
+    margin-top: 5%; }
 
 .buscar {
   height: 10px; }
 
-.section1Tienda {
+.tiendafila {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: auto;
-  grid-area: section1;
-  background-color: #fae7a9;
+  justify-content: space-between;
+  align-items: center;
   overflow: auto; }
-  .section1Tienda div {
-    display: flex;
-    flex-direction: column;
-    justify-content: auto;
-    align-items: auto; }
-  .section1Tienda img {
-    position: relative;
-    top: 3vh;
-    width: 25vw;
-    height: 25vw;
-    margin: 0;
-    padding: 0;
-    border-radius: 100%;
-    max-width: 25vh;
-    max-height: 25vh;
-    transition-duration: 1s;
-    transition-property: size, transform; }
-  .section1Tienda img:hover {
-    transition: 1s;
-    transform: scale(1.2); }
-  .section1Tienda h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: large;
-    text-align: center;
-    color: #DEA057;
-    font-weight: bold; }
 
-.section2Tienda {
+.TiendaDiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: auto;
-  grid-area: section2;
-  background-color: #fae7a9;
-  overflow: scroll; }
-  .section2Tienda div {
-    display: flex;
-    flex-direction: column;
-    justify-content: auto;
-    align-items: auto; }
-  .section2Tienda img {
-    position: relative;
-    top: 3vh;
-    width: 25vw;
-    height: 25vw;
-    margin: 0;
-    padding: 0;
+  align-items: center;
+  width: 40vh;
+  height: fit-content;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 10%;
+  background-color: #f5dabc;
+  border: 2px solid #e29235; }
+  .TiendaDiv a {
+    margin: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    text-align: left;
+    color: white;
+    font-weight: bold; }
+  .TiendaDiv img {
     border-radius: 100%;
-    max-width: 25vh;
-    max-height: 25vh;
-    transition-duration: 1s;
-    transition-property: size, transform; }
-  .section2Tienda img:hover {
-    transition: 1s;
-    transform: scale(1.2); }
-  .section2Tienda h3 {
+    width: 10vw;
+    height: 10vw; }
+  .TiendaDiv h3 {
     font-family: "Raleway", sans-serif;
     font-size: large;
     text-align: center;
-    color: #DEA057;
-    font-weight: bold; }
+    color: #e29235;
+    font-weight: bold;
+    margin: 5%; }
 
-.section3Tienda {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: auto;
-  grid-area: section3;
-  background-color: #fae7a9;
-  overflow: auto; }
-  .section3Tienda div {
-    display: flex;
-    flex-direction: column;
-    justify-content: auto;
-    align-items: auto; }
-  .section3Tienda img {
-    position: relative;
-    top: 3vh;
-    width: 25vw;
-    height: 25vw;
-    margin: 0;
-    padding: 0;
-    border-radius: 100%;
-    max-width: 25vh;
-    max-height: 25vh;
-    transition-duration: 1s;
-    transition-property: size, transform; }
-  .section3Tienda img:hover {
-    transition: 1s;
-    transform: scale(1.2); }
-  .section3Tienda h3 {
+.botonComprar {
+  background-color: #e29235;
+  transition-property: background-color;
+  transition-duration: 1s;
+  margin-top: 5%; }
+
+.botonComprar:hover {
+  background-color: #c47720;
+  font-family: "Raleway", sans-serif;
+  font-size: medium;
+  text-align: left;
+  color: white;
+  font-weight: bold; }
+
+aside {
+  grid-area: aside; }
+
+.navlinks {
+  font-family: "Raleway", sans-serif;
+  font-size: medium;
+  text-align: left;
+  color: #fffefe;
+  font-weight: bold;
+  background-color: #e29235;
+  padding: 8%;
+  border-radius: 3%; }
+
+.tiendaBoton {
+  background-color: #fae7a9; }
+
+.tiendaNav {
+  padding: 5%;
+  width: 20vw;
+  height: fit-content;
+  border: 2px solid #e29235; }
+  .tiendaNav button {
+    background-color: #fae7a9;
+    border: 2px solid #e29235; }
+  .tiendaNav h2 {
     font-family: "Raleway", sans-serif;
     font-size: large;
-    text-align: center;
-    color: #DEA057;
+    text-align: left;
+    color: #e29235;
     font-weight: bold; }
-
-.searchBar {
-  position: absolute;
-  width: 40%;
-  margin-left: 30%; }
-
-.searchButton {
-  position: absolute;
-  left: 70%;
-  margin-left: 10px; }
+  .tiendaNav a {
+    margin: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    text-align: left;
+    color: white;
+    font-weight: bold; }
+  .tiendaNav a:hover {
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    text-align: left;
+    color: #070606;
+    font-weight: bold; }
+  .tiendaNav .nav-link {
+    background-color: #e29235; }
 
 .contenedorTienda {
   display: grid;
   height: 100vh;
-  grid-template-areas: "header navegador navegador" "main main main" "section1 section1 section1" "section2 section2 section2" "section3 section3 section3" "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 13vh 15vh 40vh 40vh 50vh 8vh; }
+  grid-template-areas: "header navegador navegador" "aside main main" "footer footer footer";
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 13vh 150vh 8vh; }
 
 .mainContacto {
   grid-area: main;
@@ -393,7 +377,7 @@ a {
 
 legend {
   margin: 1%;
-  background-color: #DEA057;
+  background-color: #e29235;
   font-family: "Raleway", sans-serif;
   font-size: x-large;
   text-align: center;
@@ -404,9 +388,9 @@ legend {
 .contenedorContacto {
   display: grid;
   height: 100vh;
-  grid-template-areas: "header navegador navegador" "main main main"  "footer footer footer";
+  grid-template-areas: "header navegador navegador" "main main main" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 13vh 90vh 8vh; }
+  grid-template-rows: 13vh 130vh 8vh; }
 
 .mainRecetas {
   background-color: #fae7a9;
@@ -417,15 +401,15 @@ legend {
   align-items: center; }
   .mainRecetas h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 100%;
+    font-size: 110%;
     text-align: center;
-    color: #DEA057;
+    color: #e29235;
     font-weight: bold; }
-  .mainRecetas hp {
+  .mainRecetas p {
     font-family: "Raleway", sans-serif;
-    font-size: 70%;
+    font-size: 90%;
     text-align: center;
-    color: #DEA057;
+    color: #e29235;
     font-weight: bold; }
 
 .receta {
@@ -438,7 +422,7 @@ legend {
   max-height: 60vh;
   padding: 1%;
   border-radius: 5%;
-  background-color: #f5dabc;
+  background-color: #f5e6d4;
   overflow: auto; }
 
 .imgRecetas {
@@ -453,6 +437,96 @@ legend {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 13vh 79vh 8vh; }
 
+@media screen and (max-width: 780px) {
+  .contenedorTienda {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header navegador" "aside aside" "main main" "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 40vh 200vh 8vh; }
+  .tiendaNav {
+    width: 100vw;
+    padding: 0;
+    position: absolute; }
+  .TiendaDiv {
+    padding: 3%; }
+  .tiendafila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .mainNosotros {
+    background-color: #fae7a9;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+  .carruselImg2 {
+    width: 50vh;
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 10%; }
+  .section1Nosotros h2 {
+    margin: 2vh;
+    margin-right: 5vw;
+    font-family: "Raleway", sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    color: #e29235;
+    font-weight: bold; }
+  .section1Nosotros p {
+    margin: 2vh;
+    margin-right: 4vw;
+    overflow: auto;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.7vw;
+    text-align: center;
+    color: #e29235;
+    font-weight: bold; }
+  .mainRecetas {
+    background-color: #fae7a9;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .mainRecetas h2 {
+      font-family: "Raleway", sans-serif;
+      font-size: 110%;
+      text-align: center;
+      color: #e29235;
+      font-weight: bold; }
+    .mainRecetas p {
+      font-family: "Raleway", sans-serif;
+      font-size: 80%;
+      text-align: center;
+      color: #e29235;
+      font-weight: bold; }
+  .receta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 130%;
+    max-height: 60vh;
+    padding: 1%;
+    border-radius: 5%;
+    background-color: #f5e6d4;
+    overflow: hidden; }
+  .contenedorRecetas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header navegador navegador" "main main main" "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 13vh 200vh 8vh; }
+  .imgRecetas {
+    width: 50%;
+    border-radius: 5%;
+    margin: 5%; } }
+
 @media screen and (max-width: 480px) {
   footer h6 {
     font-family: "Raleway", sans-serif;
@@ -465,7 +539,7 @@ legend {
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "section1 section1" "section2 section2" "section3 section3" "section4 section4" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 13vh 30vh 60vh 60vh 60vh 50vh 9vh; }
+    grid-template-rows: 13vh 30vh 60vh 60vh 60vh 60vh 9vh; }
   .logo {
     width: 10vh;
     height: 10vh;
@@ -499,13 +573,13 @@ legend {
       font-family: "Raleway", sans-serif;
       font-size: large;
       text-align: center;
-      color: #DEA057;
+      color: #e29235;
       font-weight: bold;
       transform: scale(1.1); }
   .hamburgesaBoton {
     border: none;
     background-color: #fae7a9;
-    color: #DEA057;
+    color: #e29235;
     transform: scale(1.4); }
   .carruselImg {
     width: 100vw;
@@ -525,7 +599,7 @@ legend {
       font-family: "Raleway", sans-serif;
       font-size: small;
       text-align: center;
-      color: #DEA057;
+      color: #e29235;
       font-weight: bold; }
   .carrusel {
     margin: 9%; }
@@ -538,104 +612,71 @@ legend {
   .contenedorTienda {
     display: grid;
     height: 100vh;
-    grid-template-areas: "header navegador" "main main" "section1 section1" "section2 section2" "section3 section3" "footer footer";
+    grid-template-areas: "header navegador" "aside aside" "main main" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 13vh 15vh 30vh 30vh 30vh 8vh; }
-  .section1Tienda {
+    grid-template-rows: 13vh 40vh 200vh 8vh; }
+  .navlinks {
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    text-align: center;
+    color: #fffefe;
+    font-weight: bold;
+    background-color: #e29235;
+    padding: 2%;
+    margin-left: 10%;
+    border-radius: 3%; }
+  .tiendaNav {
+    width: 100vw;
+    padding: 0;
+    position: absolute; }
+  .tiendafila {
     display: flex;
-    flex-direction: row;
-    justify-content: auto;
-    align-items: auto;
-    background-color: #fae7a9;
-    overflow: scroll;
-    border: 2px solid #DEA057; }
-    .section1Tienda div {
-      display: flex;
-      flex-direction: column;
-      justify-content: auto;
-      align-items: auto;
-      margin-right: 5vh;
-      margin-left: 5vh; }
-    .section1Tienda img {
-      width: 15vh;
-      height: 15vh;
-      margin: 0;
-      padding: 0;
-      border-radius: 100%; }
-    .section1Tienda h3 {
-      font-family: "Raleway", sans-serif;
-      font-size: small;
-      text-align: center;
-      color: #DEA057;
-      font-weight: bold;
-      margin-top: 10px; }
-  .section2Tienda {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto; }
+  .TiendaDiv {
     display: flex;
-    flex-direction: row;
-    justify-content: auto;
-    align-items: auto;
-    background-color: #fae7a9;
-    overflow: scroll;
-    border: 2px solid #DEA057; }
-    .section2Tienda div {
-      display: flex;
-      flex-direction: column;
-      justify-content: auto;
-      align-items: auto;
-      margin-right: 5vh;
-      margin-left: 5vh; }
-    .section2Tienda img {
-      width: 15vh;
-      height: 15vh;
-      margin: 0;
-      padding: 0;
-      border-radius: 100%; }
-    .section2Tienda h3 {
-      font-family: "Raleway", sans-serif;
-      font-size: small;
-      text-align: center;
-      color: #DEA057;
-      font-weight: bold;
-      margin-top: 10px; }
-  .section3Tienda {
-    display: flex;
-    flex-direction: row;
-    justify-content: auto;
-    align-items: auto;
-    background-color: #fae7a9;
-    overflow: scroll;
-    border: 2px solid #DEA057; }
-    .section3Tienda div {
-      display: flex;
-      flex-direction: column;
-      justify-content: auto;
-      align-items: auto;
-      margin-right: 5vh;
-      margin-left: 5vh; }
-    .section3Tienda img {
-      width: 15vh;
-      height: 15vh;
-      margin: 0;
-      padding: 0;
-      border-radius: 100%; }
-    .section3Tienda h3 {
-      font-family: "Raleway", sans-serif;
-      font-size: small;
-      text-align: center;
-      color: #DEA057;
-      font-weight: bold;
-      margin-top: 10px; }
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vh;
+    height: fit-content;
+    margin: 5%;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: #f5dabc;
+    border: 2px solid #e29235; }
+    .TiendaDiv img {
+      width: 25vw;
+      height: 25vw; }
   .contenedorRecetas {
     display: grid;
     height: 100vh;
     grid-template-areas: "header navegador" "main main" "footer footer ";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 13vh 77vh  8vh; }
+    grid-template-rows: 13vh 190vh 8vh; }
     .contenedorRecetas .mainRecetas {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      .contenedorRecetas .mainRecetas .botonComprar {
+        font-family: "Raleway", sans-serif;
+        font-size: medium;
+        text-align: left;
+        color: white;
+        font-weight: bold;
+        padding: 1%; }
+    .contenedorRecetas .imgRecetas {
+      width: 80%; }
     .contenedorRecetas .receta {
       width: 80vw;
-      height: 50vh; } }
+      height: 65vh;
+      margin: 2%; }
+  .contenedorContacto {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header navegador" "main main" "footer footer ";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 190vh 8vh; } }

@@ -4,673 +4,683 @@
 @import "base/maps";
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-h1{
-    font-family: $font;
-    color: $color-principal;
-    font-size: x-large;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
+h1 {
+  font-family: $font;
+  color: $color-principal;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .hamburguesa {
-    display: none;
+  display: none;
 }
 body {
-    background-color: $color-secundario;
+  background-color: $color-secundario;
 }
 
 .header {
-    background-color: $color-principal;
-    grid-area: header;
-    @include display-flex (flex, row, left, center);
-    ;
+  background-color: $color-principal;
+  grid-area: header;
+  @include display-flex(flex, row, left, center);
 }
 
 .logo {
-    @include sizes (10vh, 10vh, 20px, 0, 100%);
-    
+  @include sizes(10vh, 10vh, 20px, 0, 100%);
 }
 
 nav {
-    grid-area: navegador;
-    background-color: $color-principal;
-    
+  grid-area: navegador;
+  background-color: $color-principal;
 }
 
-.navList{
-    @include display-flex (flex, row, flex-end, center);
-    height: 13vh;
-    text-decoration: none;
-
+.navList {
+  @include display-flex(flex, row, flex-end, center);
+  height: 13vh;
+  text-decoration: none;
 }
 .item {
-    list-style-type: none;
-    padding: map-get($estiloPad, padding3);
-    transition-property: background-color, transform;
-    transition-duration: 1s;
+  list-style-type: none;
+  padding: map-get($estiloPad, padding3);
+  transition-property: background-color, transform;
+  transition-duration: 1s;
 }
 
 .item:hover {
-    background-color: #c47720;
-    a{
-        color: black;
-         transform: scale(1.1);
-         
-     }
+  background-color: #c47720;
+  a {
+    color: black;
+    transform: scale(1.1);
+  }
 }
 
 a {
-    transition-property: color, transform;
-    transition-duration: 1s;
-    text-decoration: none;
-    @include textConfig ($font, 120%, center, white, bold);
-    
+  transition-property: color, transform;
+  transition-duration: 1s;
+  text-decoration: none;
+  @include textConfig($font, 120%, center, white, bold);
 }
-
-
 
 .footer {
+  background-color: $color-secundario;
+  @include display-flex(flex, column, center, center);
+  grid-area: footer;
+  padding: 2%;
 
-    background-color: $color-secundario;
-    @include display-flex(flex, column, center, center);
-    grid-area:footer;
-    padding:2%;
-
-    h6 {
-        font-family: $font;
-        text-align: center;
-        margin: 1vh;
-    }
+  h6 {
+    font-family: $font;
+    text-align: center;
+    margin: 1vh;
+  }
 }
 .red {
-    @include sizes (5vw, 5vw, 1vh, 0, 0);
-    max-height: 40px;
-    max-width: 40px;
+  @include sizes(5vw, 5vw, 1vh, 0, 0);
+  max-height: 40px;
+  max-width: 40px;
 }
-
 
 //estilos del index
 
 .mainIndex {
-    background-color: $color-secundario;
-    grid-area: main;
-    @include display-flex (flex, row, center, center);
+  background-color: $color-secundario;
+  grid-area: main;
+  @include display-flex(flex, row, center, center);
 }
 .carrvusel {
-    width: 100vw;
+  width: 100vw;
 }
 
 .carruselImg {
-    @include sizes (100vw, 90vh, 0, 0, 0);
-    max-height: 90vh;
-    
+  @include sizes(100vw, 90vh, 0, 0, 0);
+  max-height: 90vh;
 }
-  
-.botonComprarAhora {
-    background-color: $color-principal;
-    @include sizes (fit-content, fit-content, 0, 20px, 25px);
-    position: absolute;
-    top: 80%;
-    transition-property: background-color, transform;
-    transition-duration: 1s;
 
-    h2{
-        font-family: $font;
-        color: white;
-        font-size: medium;
-        text-align: center;
-        width: 27vw;
-        text-decoration: none;
-    }
+.botonComprarAhora {
+  background-color: $color-principal;
+  @include sizes(fit-content, fit-content, 0, 20px, 25px);
+  position: absolute;
+  top: 80%;
+  transition-property: background-color, transform;
+  transition-duration: 1s;
+
+  h2 {
+    font-family: $font;
+    color: white;
+    font-size: medium;
+    text-align: center;
+    width: 27vw;
+    text-decoration: none;
+  }
 }
 
 .botonComprarAhora:hover {
-    background-color: #c47720;
-    transform: scale(1.1);
+  background-color: #c47720;
+  transform: scale(1.1);
 }
 
-.section1{
-    background-color: $color-secundario;
-    grid-area: section1;
-    @include display-flex (flex, column, center, center);
+.section1 {
+  background-color: $color-secundario;
+  grid-area: section1;
+  @include display-flex(flex, column, center, center);
 
-    h3{
-        @extend %titIndex;
-    }
-    img {
-        @extend %imgIndex;
-    }
-    p{
-        @extend %txtIndex;
-    }
+  h3 {
+    @extend %titIndex;
+  }
+  img {
+    @extend %imgIndex;
+  }
+  p {
+    @extend %txtIndex;
+  }
 }
-.section2{
-    background-color: $color-secundario;
-    grid-area: section2;
-    @include display-flex (flex, column, center, center);
+.section2 {
+  background-color: $color-secundario;
+  grid-area: section2;
+  @include display-flex(flex, column, center, center);
 
-    h3{
-        @extend %titIndex;
-    }
-    img {
-        @extend %imgIndex;
-    }
-    p{
-        @extend %txtIndex;
-    }
+  h3 {
+    @extend %titIndex;
+  }
+  img {
+    @extend %imgIndex;
+  }
+  p {
+    @extend %txtIndex;
+  }
 }
-.section3{
-    background-color: $color-secundario;
-    grid-area: section3;
-    @include display-flex (flex, column, center, center);
+.section3 {
+  background-color: $color-secundario;
+  grid-area: section3;
+  @include display-flex(flex, column, center, center);
 
-    h3{
-        @extend %titIndex;
-    }
-    img {
-        @extend %imgIndex;
-    }
-    p{
-        @extend %txtIndex;
-    }
+  h3 {
+    @extend %titIndex;
+  }
+  img {
+    @extend %imgIndex;
+  }
+  p {
+    @extend %txtIndex;
+  }
 }
 
 .section4 {
-    background-color: $color-secundario;
-    grid-area: section4;
-    @include display-flex (flex, column, center, center);
+  background-color: $color-secundario;
+  grid-area: section4;
+  @include display-flex(flex, column, center, center);
 
-    h3{
-        @include textConfig ($font, x-large, center, $color-principal, bold);
-        margin-top: 2vh;
-    }
-}
+  h3 {
+    @include textConfig($font, x-large, center, $color-principal, bold);
+    margin-top: 2vh;
+  }
+}botonComprar
 
 .map {
-    @include sizes ( 80%, 80%, 5vh, 0, 5vh);
+  @include sizes(80%, 80%, 5vh, 0, 5vh);
 }
 
-.contenedorIndex{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: "header navegador navegador"
+.contenedorIndex {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header navegador navegador"
     "main main main"
-    "section1 section2 section3" 
+    "section1 section2 section3"
     "section4 section4 section4"
     "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 13vh 90vh 90vh 60vh 9vh;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 13vh 90vh 90vh 60vh 9vh;
+}
 
-  // estilos de Nosotros
+// estilos de Nosotros
 
-  .mainNosotros {
-      background-color: $color-secundario;
-      grid-area: main;
-      @include display-flex (flex, row, space-around, center);
-       
-  }
-  .carrusel {
-      margin: 20vw;
-  }
-  .carruselImg2{
-      @include sizes (70vh, 70vh, 0, 0, 10%);
-        
-  }
-  .section1Nosotros {
-      grid-area: section;
-      background-color: $color-secundario;
-      @include display-flex(flex, column, center, center);
-      
-      h2{
-          margin: 2vh;
-          margin-right: 5vw;
-          margin-left: 5vw;
-          @include textConfig($font, x-large, center, $color-principal, bold)
+.mainNosotros {
+  background-color: $color-secundario;
+  grid-area: main;
+  @include display-flex(flex, row, space-around, center);
+}
 
-      }
-      p{
-        margin: 2vh;
-        margin-right: 6vw;
-        margin-left: 5vw;
-        @include textConfig($font, medium, center, $color-principal, bold)
-      }
-  }
+.carruselImg2 {
+  @include sizes(60vh, 60vh, 0, 0, 10%);
+}
+.section1Nosotros {
+  grid-area: section;
+  background-color: $color-secundario;
 
-.contenedorNosotros{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: "header navegador navegador"
+  @include display-flex(flex, column, center, center);
+
+  h2 {
+    margin: 2vh;
+    margin-right: 5vw;
+
+    @include textConfig($font, 3vh, center, $color-principal, bold);
+  }
+  p {
+    margin: 2vh;
+    margin-right: 4vw;
+    overflow: auto;
+    @include textConfig($font, 1.5vw, center, $color-principal, bold);
+  }
+}
+
+.contenedorNosotros {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header navegador navegador"
     "main main section"
     "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 77vh 8vh;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 13vh 77vh 8vh;
+}
 
-  // Estilos de Tienda
+// Estilos de Tienda
 
 .mainTienda {
-      grid-area: main;
-      background-color: $color-secundario;
-      
-      h1 {
-          margin: 2%;
-      }
+  grid-area: main;
+  background-color: $color-secundario;
+
+  h2 {
+    @include textConfig($font, 200%, center, $color-principal, bold);
+    margin-top: 5%;
   }
-
-  .buscar {
-      height: 10px;
-  }
-
-.section1Tienda {
-
-    @include display-flex(flex, row, space-around, auto);
-    grid-area: section1;
-    background-color: $color-secundario;
-    overflow: auto;
-
-    div{
-        @include display-flex(flex, column, auto, auto);
-        
-    }
-    img {
-        position: relative;
-        top: 3vh;
-        @include sizes (25vw, 25vw, 0, 0, 100%);
-        max-width: 25vh;
-        max-height: 25vh;  
-        transition-duration: 1s;
-        transition-property: size, transform;   
-        }
-        img:hover{
-            transition: 1s ;
-            transform: scale(1.2);
-      }
-    h3{
-        @include textConfig ($font, large, center, $color-principal, bold)
-    } 
-
 }
-.section2Tienda {
 
-    @include display-flex(flex, row, space-around, auto);
-    grid-area: section2;
-    background-color: $color-secundario;
-    overflow: scroll;
-
-    div{
-        @include display-flex(flex, column, auto, auto);
-        
-        
-    }
-    img {
-        position: relative;
-        top: 3vh;
-        @include sizes (25vw, 25vw, 0, 0, 100%);
-        max-width: 25vh;
-        max-height: 25vh;
-        transition-duration: 1s;
-        transition-property: size, transform;   
-        }
-        img:hover{
-            transition: 1s ;
-            transform: scale(1.2);
-      }
-    h3{
-        @include textConfig ($font, large, center, $color-principal, bold)
-    } 
-
+.buscar {
+  height: 10px;
 }
-.section3Tienda {
 
-    @include display-flex(flex, row, space-around, auto);
-    grid-area: section3;
-    background-color: $color-secundario;
-    overflow: auto;
-
-    div{
-        @include display-flex(flex, column, auto, auto);
-    }
-    img {
-        position: relative;
-        top: 3vh;
-        @include sizes (25vw, 25vw, 0, 0, 100%);
-        max-width: 25vh;
-        max-height: 25vh;
-        transition-duration: 1s;
-        transition-property: size, transform;    
-        }
-        img:hover{
-            transition: 1s ;
-            transform: scale(1.2);
-      }
-    h3{
-        @include textConfig ($font, large, center, $color-principal, bold)
-    } 
-
+.tiendafila {
+  @include display-flex(Flex, row, space-between, center);
+  overflow: auto;
 }
-.searchBar {
-    position: absolute;
-    width: 40%;
-    margin-left: 30%;
-  }
-.searchButton {
-    position: absolute;
-    left: 70%;
-    margin-left: 10px;
+.TiendaDiv {
+  @include display-flex(flex, column, space-around, center);
+  @include sizes(40vh, fit-content, 5%, 20px, 10%);
+
+  background-color: #f5dabc;
+
+  border: 2px solid $color-principal;
+
+  a {
+    margin: 5px;
+    @include textConfig($font, medium, left, white, bold);
   }
 
-.contenedorTienda{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: "header navegador navegador"
-    "main main main"
-    "section1 section1 section1"
-    "section2 section2 section2"
-    "section3 section3 section3"
+  img {
+    border-radius: 100%;
+    width: 10vw;
+    height: 10vw;
+  }
+  h3 {
+    @include textConfig($font, large, center, $color-principal, bold);
+    margin: 5%;
+  }
+}
+.botonComprar {
+  background-color: $color-principal;
+  transition-property: background-color;
+  transition-duration: 1s;
+  margin-top: 5%;
+}
+.botonComprar:hover {
+  background-color: #c47720;
+
+  @include textConfig($font, medium, left, white, bold);
+}
+
+aside {
+  grid-area: aside;
+}
+.navlinks {
+  @include textConfig($font, medium, left, rgb(255, 254, 254), bold);
+  background-color: $color-principal;
+  padding: 8%;
+  border-radius: 3%;
+}
+.tiendaBoton {
+  background-color: $color-secundario;
+}
+.tiendaNav {
+  padding: 5%;
+  width: 20vw;
+  height: fit-content;
+  border: 2px solid $color-principal;
+
+  button {
+    background-color: $color-secundario;
+    border: 2px solid $color-principal;
+  }
+
+  h2 {
+    @include textConfig($font, large, left, $color-principal, bold);
+  }
+
+  a {
+    margin: 5px;
+    @include textConfig($font, medium, left, white, bold);
+  }
+  a:hover {
+    @include textConfig($font, medium, left, rgb(7, 6, 6), bold);
+  }
+
+  .nav-link {
+    background-color: $color-principal;
+  }
+}
+
+.contenedorTienda {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header navegador navegador"
+    "aside main main"
     "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 15vh 40vh 40vh 50vh 8vh;
-  }
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 13vh 150vh 8vh;
+}
 
 // estilos de contacto
 
-.mainContacto
-  {
-    grid-area: main;
-    background-color:$color-secundario;
-  }
+.mainContacto {
+  grid-area: main;
+  background-color: $color-secundario;
+}
 
-  legend {
-      margin:map-get($estiloMarg, marg1);
-      background-color: $color-principal;
-      @include textConfig ($font, x-large, center, white, bold);
-      width: 100%;
+legend {
+  margin: map-get($estiloMarg, marg1);
+  background-color: $color-principal;
+  @include textConfig($font, x-large, center, white, bold);
+  width: 100%;
+}
+.contenedorContacto {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header navegador navegador"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 13vh 130vh 8vh;
+}
+
+// Estilos de Recetas
+
+.mainRecetas {
+  background-color: $color-secundario;
+  grid-area: main;
+  @include display-flex(flex, row, space-around, center);
+
+  h2 {
+    @include textConfig($font, 110%, center, $color-principal, bold);
   }
-.contenedorContacto{
+  p {
+    @include textConfig($font, 90%, center, $color-principal, bold);
+  }
+}
+
+.receta {
+  @include display-flex(flex, column, space-around, center);
+  width: 25%;
+  height: 120%;
+  max-height: 60vh;
+  padding: 1%;
+  border-radius: 5%;
+  background-color: #f5e6d4;
+  overflow: auto;
+}
+
+.imgRecetas {
+  width: 60%;
+  border-radius: 5%;
+  margin: 1%;
+}
+.contenedorRecetas {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header navegador navegador"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 13vh 79vh 8vh;
+}
+
+
+//Breackpoint Tablet
+
+
+
+@media screen and (max-width: 780px) {
+  .contenedorTienda {
     display: grid;
     height: 100vh;
-    grid-template-areas: "header navegador navegador"
-    "main main main"
-  
-    "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 90vh 8vh;
-    
+    grid-template-areas:
+      "header navegador"
+      "aside aside"
+      "main main"
+      "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 40vh 200vh 8vh;
   }
-  
-  
 
-  // Estilos de Recetas 
+  .tiendaNav {
+    width: 100vw;
+    padding: 0;
+    position: absolute;
+  }
 
+  .TiendaDiv {
+    padding: 3%;
+  }
+  .tiendafila {
+    @include display-flex(Flex, row, center, center);
+  }
+  .mainNosotros {
+    background-color: $color-secundario;
+    grid-area: main;
+    @include display-flex(flex, row, space-around, center);
+  }
 
-  
+  .carruselImg2 {
+    @include sizes(50vh, 50vh, 0, 0, 10%);
+  }
+  .section1Nosotros {
+    h2 {
+      margin: 2vh;
+      margin-right: 5vw;
+
+      @include textConfig($font, 3vh, center, $color-principal, bold);
+    }
+    p {
+      margin: 2vh;
+      margin-right: 4vw;
+      overflow: auto;
+      @include textConfig($font, 1.7vw, center, $color-principal, bold);
+    }
+  }
 
   .mainRecetas {
-      background-color: $color-secundario;
-    grid-area:main;
-    @include display-flex(flex, row, space-around, center);
-  
-    h2{
-        @include textConfig ($font, 100%, center, $color-principal, bold)
-    } 
-    hp{
-        @include textConfig ($font, 70%, center, $color-principal, bold)
-    } 
-  }
-
-  .receta {
+    background-color: $color-secundario;
+    grid-area: main;
     @include display-flex(flex, column, space-around, center);
-      width: 25%;
-      height: 120%;
-      max-height: 60vh;
-      padding: 1%;
-      border-radius: 5%;
-      background-color: #f5dabc;
-      overflow: auto;
-  }
-  
-  .imgRecetas {
-      width: 60%;
-      border-radius: 5%;
-      margin: 1%;
-  }
-  .contenedorRecetas{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: "header navegador navegador"
-    "main main main"
-    "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 13vh 79vh 8vh;
-    
-  }
 
-
-  //Breackpoint Mobile
-
-  @media screen and (max-width:480px) {
-
-    footer{
-        h6{
-            @include textConfig ($font, small, center, black, auto );
-        }
+    h2 {
+      @include textConfig($font, 110%, center, $color-principal, bold);
     }
-
-    //Index mobile
-
-    .contenedorIndex {
-        display: grid;
-        height: 100vh;
-        
-        grid-template-areas: "header navegador"
-        "main main"
-        "section1 section1"
-        "section2 section2"
-        "section3 section3"
-        "section4 section4"
-        "footer footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows:13vh 30vh 60vh 60vh 60vh 50vh 9vh;
-        
-        
-    }
-    .logo {
-        @include sizes (10vh, 10vh, 10px, 0, 100%);
-    }
-
-    .navList {
-        display: none;
-    }
-    header {
-        @include display-flex(flex, row, flex-end, center);
-        
-    }
-    nav{ 
-        @include display-flex(flex, row, flex-end, center);
-    }
-    
-    .hamburguesa {
-        @include display-flex(flex, row, center, center);
-        @include sizes (15vw, 15vw, 0, 0, 0);
-        padding-right: 30%;
-   
-    a {
-        
-        @include textConfig ($font, large, center, $color-principal, bold );
-        transform: scale(1.1);
-        
-    }
-
-    }
-    .hamburgesaBoton{
-        border: none;
-        background-color: $color-secundario;
-        color: $color-principal ;
-        transform: scale(1.4);
-
-    }
-    
-    .carruselImg{
-
-        @include sizes (100vw, 30vh, 0, 0, 0);
-
-    }
-
-    .botonComprarAhora {
-        display: none;
-    }
-
-
-    //Mobile N osotros
-
-    
-
-    .contenedorNosotros{
-        display: grid;
-        height: 100vh;
-        grid-template-areas: "header navegador"
-        "main main"
-        "section section"
-        "footer footer";
-        grid-template-columns: 50% 50% ;
-        grid-template-rows: 15vh 70vh 70vh 8vh;
-       
     p {
-        @include textConfig ($font, small, center, $color-principal, bold );
-        
+      @include textConfig($font, 80%, center, $color-principal, bold);
     }
-    }
-    .carrusel {
-        margin: map-get($estiloMarg, marg10);
-    }
-   
-
-    .carruselImg2 {
-        @include sizes (75vw, 75vw, 0, 0, 10%);
-        
-    }
-    
-
-    //mobile Tienda
-
-    .contenedorTienda{
-        display: grid;
-        height: 100vh;
-        grid-template-areas: "header navegador"
-        "main main"
-        "section1 section1"
-        "section2 section2"
-        "section3 section3"
-        "footer footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 13vh 15vh 30vh 30vh 30vh 8vh;
-      }
-
-      .section1Tienda {
-
-        @include display-flex(flex, row, auto, auto);
-
-        background-color: $color-secundario;
-        overflow: scroll;
-        border: 2px solid $color-principal;
-    
-        div{
-            @include display-flex(flex, column, auto, auto);
-            margin-right: 5vh;
-            margin-left: 5vh;
-        }
-        img {
-           
-            @include sizes (15vh, 15vh, 0, 0, 100%);
-              
-            }
-        h3 {
-            @include textConfig ($font, small, center, $color-principal, bold);
-            margin-top: 10px;
-        }
   }
-      .section2Tienda {
-
-        @include display-flex(flex, row, auto, auto);
-        
-        background-color: $color-secundario;
-        overflow: scroll;
-        border: 2px solid $color-principal;
-    
-        div{
-            @include display-flex(flex, column, auto, auto);
-            margin-right: 5vh;
-            margin-left: 5vh;
-        }
-        img {
-           
-            @include sizes (15vh, 15vh, 0, 0, 100%);
-              
-            }
-        h3 {
-            @include textConfig ($font, small, center, $color-principal, bold);
-            margin-top: 10px;
-        }
-  }
-  .section3Tienda {
-
-        @include display-flex(flex, row, auto, auto);
-        
-        background-color: $color-secundario;
-        overflow: scroll;
-        border: 2px solid $color-principal;
-    
-        div{
-            @include display-flex(flex, column, auto, auto);
-            margin-right: 5vh;
-            margin-left: 5vh;
-        }
-        img {
-           
-            @include sizes (15vh, 15vh, 0, 0, 100%);
-              
-            }
-        h3 {
-            @include textConfig ($font, small, center, $color-principal, bold);
-            margin-top: 10px;
-        }
+  .receta {
+    @include display-flex(flex, column, center, center);
+    width: 70%;
+    height: 130%;
+    max-height: 60vh;
+    padding: 1%;
+    border-radius: 5%;
+    background-color: #f5e6d4;
+    overflow: hidden;
   }
 
-  // Mobile Recetas
-   
-  .contenedorRecetas{
+  .contenedorRecetas {
     display: grid;
     height: 100vh;
-    grid-template-areas: "header navegador"
-    "main main"
-    "footer footer ";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 13vh 77vh  8vh; 
-  
-    .mainRecetas {
-        @include display-flex(flex, column, center, center);
+    grid-template-areas:
+      "header navegador navegador"
+      "main main main"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 13vh 200vh 8vh;
+  }
+  .imgRecetas {
+    width: 50%;
+    border-radius: 5%;
+    margin: 5%;
+  }
+}
+
+//Breackpoint Mobile
+
+@media screen and (max-width: 480px) {
+  footer {
+    h6 {
+      @include textConfig($font, small, center, black, auto);
     }
-    
+  }
+
+  //Index mobile
+
+  .contenedorIndex {
+    display: grid;
+    height: 100vh;
+
+    grid-template-areas:
+      "header navegador"
+      "main main"
+      "section1 section1"
+      "section2 section2"
+      "section3 section3"
+      "section4 section4"
+      "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 30vh 60vh 60vh 60vh 60vh 9vh;
+  }
+  .logo {
+    @include sizes(10vh, 10vh, 10px, 0, 100%);
+  }
+
+  .navList {
+    display: none;
+  }
+  header {
+    @include display-flex(flex, row, flex-end, center);
+  }
+  nav {
+    @include display-flex(flex, row, flex-end, center);
+  }
+
+  .hamburguesa {
+    @include display-flex(flex, row, center, center);
+    @include sizes(15vw, 15vw, 0, 0, 0);
+    padding-right: 30%;
+
+    a {
+      @include textConfig($font, large, center, $color-principal, bold);
+      transform: scale(1.1);
+    }
+  }
+  .hamburgesaBoton {
+    border: none;
+    background-color: $color-secundario;
+    color: $color-principal;
+    transform: scale(1.4);
+  }
+
+  .carruselImg {
+    @include sizes(100vw, 30vh, 0, 0, 0);
+  }
+
+  .botonComprarAhora {
+    display: none;
+  }
+
+  //Mobile Nosotros
+
+  .contenedorNosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+      "header navegador"
+      "main main"
+      "section section"
+      "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15vh 70vh 70vh 8vh;
+
+    p {
+      @include textConfig($font, small, center, $color-principal, bold);
+    }
+  }
+  .carrusel {
+    margin: map-get($estiloMarg, marg10);
+  }
+
+  .carruselImg2 {
+    @include sizes(75vw, 75vw, 0, 0, 10%);
+  }
+
+  //mobile Tienda
+
+  .contenedorTienda {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+      "header navegador"
+      "aside aside"
+      "main main"
+      "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 40vh 200vh 8vh;
+  }
+
+  .navlinks {
+    @include textConfig($font, medium, center, rgb(255, 254, 254), bold);
+    background-color: $color-principal;
+    padding: 2%;
+    margin-left: 10%;
+    border-radius: 3%;
+  }
+  .tiendaNav {
+    width: 100vw;
+    padding: 0;
+    position: absolute;
+  }
+  .tiendafila {
+    @include display-flex(Flex, column, space-between, center);
+    overflow: auto;
+  }
+
+  .TiendaDiv {
+    @include display-flex(flex, column, space-around, center);
+    @include sizes(40vh, fit-content, 5%, 20px, 5%);
+
+    background-color: #f5dabc;
+
+    border: 2px solid $color-principal;
+
+    img {
+      width: 25vw;
+      height: 25vw;
+    }
+  }
+  // Mobile Recetas
+
+  .contenedorRecetas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+      "header navegador"
+      "main main"
+      "footer footer ";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 190vh 8vh;
+
+    .mainRecetas {
+      @include display-flex(flex, column, center, center);
+
+      .botonComprar {
+        @include textConfig($font, medium, left, white, bold);       
+        padding: 1%;
+      }
+    }
+    .imgRecetas {
+      width: 80%;
+    }
 
     .receta {
-        width: 80vw;
-        height: 50vh;
-        
-         
+      width: 80vw;
+      height: 65vh;
+      margin: 2%;
     }
   }
-  
 
-    
-  
-
+  .contenedorContacto {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+      "header navegador"
+      "main main"
+      "footer footer ";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 13vh 190vh 8vh;
+  }
 }
